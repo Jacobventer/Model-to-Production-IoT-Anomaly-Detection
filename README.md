@@ -3,6 +3,35 @@ This propject is a proof of concept that integrates a ML pipeline for anomaly de
 
 ## Overview
 
+## Repository Structure
+```bash
+Model to production IoT Anomaly Detection/
+│
+├── data/
+│   ├── simulated live data/           
+│
+├── notebooks/
+│   ├── sensor_simulator.py       
+│   └──  
+│
+├── src/
+│   ├── data_preprocessing.py   
+│   ├── model_training.py       
+│   └── visualization.py        
+│
+├── models/
+│   ├── saved_model/           
+│   └── model_results/          
+│
+├── reports/
+│   ├── figures/                
+│   └── final_report.pdf        
+│
+├── requirements.txt
+└── README.md
+
+```
+
 
 
 ## License
