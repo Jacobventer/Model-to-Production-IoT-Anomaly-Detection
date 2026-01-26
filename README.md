@@ -35,4 +35,4 @@ Model to production IoT Anomaly Detection/
 
 
 ## License
-This repository is released for educational and academic purposes only. It must not be used for clinical or diagnostic decision-making.
+This project is for academic purposes only as part of the Data Science degree at IU International University of Applied Science
