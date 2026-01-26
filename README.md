@@ -5,5 +5,5 @@ This propject is a proof of concept that integrates a ML pipeline for anomaly de
 
 
 
-##License
+## License
 This repository is released for educational and academic purposes only. It must not be used for clinical or diagnostic decision-making.
