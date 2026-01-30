@@ -11,9 +11,9 @@ It was developed as part of the *From Model to Production* course and focuses on
 
 An unsupervised anomaly detection model is trained and the system simulates a continous sensor stream. Predictions are made via a RESTful API. The results are loged for evaluation and monitoring.
 
-##Problem Statement
+## Problem Statement
 Wind turbine components operate under varying environmental and mechanical conditions.  
-Early detection of abnormal behaviour in temperature, humidity, and sound levels can prevent costly downtime and component failure.
+Early detection of abnormal behaviour in temperature, humidity, and sound levels can prevent costly downtime.
 
 Challenges addressed:
 - Lack of labeled failure data
@@ -21,7 +21,6 @@ Challenges addressed:
 - Unknown failure patterns
 
 To address these challenges, an **unsupervised anomaly detection approach** was chosen.
-
 
 ## Repository Structure
 ```bash
@@ -54,10 +53,66 @@ project/
 ├── requirements.txt                 # Python dependencies
 └── README.md                        # Project overview & run instructions
 
-
 ```
 
+## System Architecture
+The system consists of the following components:
 
+1. **Sensor Simulator** – Generates continuous, realistic sensor data
+2. **Data Logging Layer** – Stores predictions and sensor readings
+3. **Model Training Module** – Trains an Isolation Forest offline
+4. **Inference API** – Exposes anomaly predictions via REST
+5. **Evaluation & Monitoring** – Analyses logged predictions
+
+## Machine Learning Model
+- **Model:** Isolation Forest
+- **Type:** Unsupervised anomaly detection
+- **Features:** Temperature, Humidity, Sound
+- **Training:** Offline using simulated sensor data
+- **Inference:** Real-time via REST API
+
+
+## How to Run the Project
+
+### 1. Install dependencies
+pip install -r requirements.txt
+### 2. Generate training data
+python src/generate_training_data.py
+### 3. Train the model
+python src/train_model.py
+### 4. Start the API
+python src/app.py
+### 5. Start live sensor simulation
+python src/sensor_simulator_live.py
+### 6. Evaluate results
+python evaluation/model_evaluation.py
+
+
+## Results summary
+- Anomalies represent approximately 2–3% of all readings
+- Anomaly rates are balanced across machines
+- Distributions align with expected physical behaviour
+- Logged predictions allow post-hoc analysis and monitoring
+
+## Limitations
+- Data is simulated and not collected from real turbines
+- Global model (not machine-specific)
+- Dashboard is a mock-up, not a live BI integration
+- Limited hyperparameter tuning
+
+## Conclusion
+This project demonstates a complete model to production pipeline including:
+- Domain-informed data generation
+- Offline model training
+- Online inference via REST API
+- Logging and evaluation
+
+The focus is on realistic engineering decisions and system design rather than maximizing model accuracy.
+
+## Author
+Jaco Venter
+BSc Data Science student as International University of Applied Scinece (Germany)
+https://www.linkedin.com/in/jaco-venter-45502a162/
 
 ## License
 This project is for academic purposes only as part of the Data Science degree at IU International University of Applied Science
