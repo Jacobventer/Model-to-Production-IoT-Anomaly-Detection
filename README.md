@@ -71,7 +71,7 @@ The dashboard highlights:
 
 This dashboard is a **static mock-up** and serves to demonstrate how the API outputs and logged predictions could be consumed by a real BI tool such as Power BI, Tableau, or Grafana.
 
-![Conceptual BI Dashboard](dashboard/dashboard_mock.png)
+![Conceptual BI Dashboard](dashboard/Conceptual_BI_Dashboard.png) 
 
 
 ## Machine Learning Model
