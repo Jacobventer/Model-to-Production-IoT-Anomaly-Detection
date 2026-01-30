@@ -2,6 +2,26 @@
 This propject is a proof of concept that integrates a ML pipeline for anomaly detection from IoT devices in a factory. The sensors measure temperature, humidity and sound volume of wind turbines. in production
 
 ## Overview
+In this project an end-to-end machine learning pipeline is implemented for anomaly detection in wind turbine components using simulated IoT sensor data.
+It was developed as part of the *From Model to Production* course, part of my BSc Data Science degree. The focus is on practical ML engineering concepts rather than model complexity.
+
+
+This project implements an end-to-end machine learning pipeline for anomaly detection in wind turbine components using simulated IoT sensor data.  
+It was developed as part of the *From Model to Production* course and focuses on practical ML engineering concepts rather than model complexity.
+
+An unsupervised anomaly detection model is trained and the system simulates a continous sensor stream. Predictions are made via a RESTful API. The results are loged for evaluation and monitoring.
+
+##Problem Statement
+Wind turbine components operate under varying environmental and mechanical conditions.  
+Early detection of abnormal behaviour in temperature, humidity, and sound levels can prevent costly downtime and component failure.
+
+Challenges addressed:
+- Lack of labeled failure data
+- Highly imbalanced anomaly events
+- Unknown failure patterns
+
+To address these challenges, an **unsupervised anomaly detection approach** was chosen.
+
 
 ## Repository Structure
 ```bash
