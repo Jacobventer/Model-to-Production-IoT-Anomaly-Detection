@@ -60,6 +60,20 @@ The system consists of the following components:
 4. **Inference API** – Exposes anomaly predictions via REST
 5. **Evaluation & Monitoring** – Analyses logged predictions
 
+## Conceptual BI Dashboard (Mock)
+
+The following image illustrates a conceptual Business Intelligence (BI) dashboard that could be used by factory managers to monitor system health at a glance.
+
+The dashboard highlights:
+- Overall system status (normal vs anomaly detected)
+- Affected machine and sensor type
+- Recent anomaly indicators for temperature, humidity, and sound
+
+This dashboard is a **static mock-up** and serves to demonstrate how the API outputs and logged predictions could be consumed by a real BI tool such as Power BI, Tableau, or Grafana.
+
+![Conceptual BI Dashboard](dashboard/dashboard_mock.png)
+
+
 ## Machine Learning Model
 - **Model:** Isolation Forest
 - **Type:** Unsupervised anomaly detection
