@@ -112,7 +112,7 @@ The focus is on realistic engineering decisions and system design rather than ma
 ## Author
 Jaco Venter
 BSc Data Science student as International University of Applied Scinece (Germany)
-https://www.linkedin.com/in/jaco-venter-45502a162/
+#### https://www.linkedin.com/in/jaco-venter-45502a162/
 
 ## License
 This project is for academic purposes only as part of the Data Science degree at IU International University of Applied Science
