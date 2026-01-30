@@ -5,30 +5,35 @@ This propject is a proof of concept that integrates a ML pipeline for anomaly de
 
 ## Repository Structure
 ```bash
-Model to production IoT Anomaly Detection/
+project/
 │
 ├── data/
-│   ├── simulated live data/           
-│
-├── notebooks/
-│   ├── sensor_simulator.py       
-│   └──  
-│
-├── src/
-│   ├── data_preprocessing.py   
-│   ├── model_training.py       
-│   └── visualization.py        
+│   ├── training_data.csv        # Historical simulated data used for model training
+│   └── README.md                # Brief description of how data was generated
 │
 ├── models/
-│   ├── saved_model/           
-│   └── model_results/          
+│   └── isolation_forest.pkl     # Trained ML model (offline-trained)
 │
-├── reports/
-│   ├── figures/                
-│   └── final_report.pdf        
+├── logs/
+│   └── predictions_log.csv      # Live inference results from API
 │
-├── requirements.txt
-└── README.md
+├── src/
+│   ├── generate_training_data.py    # Generates historical sensor data (offline)
+│   ├── train_model.py               # Trains Isolation Forest and saves model
+│   ├── model.py                     # Loads model and performs inference
+│   ├── app.py                       # Flask REST API for predictions
+│   ├── sensor_simulator_live.py     # Simulates live sensor data stream
+│   ├── rule_based_validator.py      # Optional rule-based sanity check
+│
+├── evaluation/
+│   ├── model_evaluation.py          # Offline evaluation & visualization
+│
+├── dashboard/
+│   └── dashboard_mock.py            # Mock BI-style dashboard (static)
+│
+├── requirements.txt                 # Python dependencies
+└── README.md                        # Project overview & run instructions
+
 
 ```
 
